@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(10, 12, 27, 1);
+    margin: 100px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(28, 25, 56, 1);
+    border-radius: 8px;
+    position: relative;
+}
+
+.bg {
+    position: relative;
+}
+
+.bg img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: -15;
+}
+
+.bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(160, 90, 205, 0.8);
+    width: 100%;
+    height: 99%;
+    z-index: 10;
+    opacity: 0.8;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+.presentation {
+   text-align: center;
+   font-family: 'Lexend Deca', sans-serif;
+}
+
+.presentation h1 {
+    color: rgba(253, 253, 254, 1);
+    margin: 20px;
+}
+
+.presentation span {
+   color: rgba(160, 90, 205, 1);
+}
+
+.presentation p {
+    color: rgba(138, 138, 153, 1);
+    margin: 0 70px;
+}
+
+.statistics div {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.stats1 strong {
+    color: rgba(253, 253, 254, 1);
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    font-size: 32px;
+}
+
+.stats1 small {
+    text-transform: uppercase;
+    color: rgba(138, 138, 153, 1);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.stats1:nth-child(3) {
+    margin-bottom: 30px;
+}
+
+@media(min-width: 768px) {
+
+    body{
+        max-width: 1000px;
+        margin: auto;
+    }
+    main {
+        flex-direction: row-reverse;
+        width: 100%;
+        height: 400px;
+    }
+
+    .bg {
+        height: 100%;
+        width: 100%;
+    }
+
+    .bg img {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        height: 100%;
+    }
+
+    .bg .overlay {
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .presentation {
+        width: 100%;
+    }
+
+    .statistics {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .statistics div {
+        text-align: start;
+    }
+
+    .stats1 {
+        padding: 10px;
+        margin-left: 16px;
+    }
+
+    .stats1 strong {
+        font-size: 20px;
+    }
+
+    .stats1 small {
+        font-weight: 400;
+    }
+}
